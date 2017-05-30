@@ -4,7 +4,10 @@
 #include <math.h>
 #include <vector>
 
-
+/**
+This program defines an Integer class that perform arithmetic operation on integers on binary format, so that we could 
+overcome the limitation of . This class with all basic operators overloaded, 
+*/
 class Integer
 {
 public:
