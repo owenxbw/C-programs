@@ -4,9 +4,14 @@
 #include <math.h>
 #include <vector>
 
-/**
-This program defines an Integer class that perform arithmetic operation on integers on binary format, so that we could 
-overcome the limitation of . This class with all basic operators overloaded, 
+/**	@file operator overloading
+	@author Bowen Xuan
+	@date April 28th 
+	
+	This program defines an Integer class that perform arithmetic operation on integers 
+	on bit-wise level, so that we could overcome the constrain of being between the max 
+	and min values the int data type can hold. This class has all basic arithmetic 
+	operators overloaded.	
 */
 class Integer
 {
@@ -19,7 +24,7 @@ public:
 	void operator&=(const Integer& rhs);
 	void operator|=(const Integer& rhs);
 	Integer& operator++();                 // prefix ++
-	Integer operator++(int unused);   // postfix ++
+	Integer operator++(int unused);        // postfix ++
 	bool operator<(const Integer& rhs) const;
 	bool operator==(const Integer& rhs) const;
 	Integer& operator<<=(unsigned int a);
@@ -278,6 +283,3 @@ bool operator!= (const Integer& lhs, const Integer& rhs) { return !(lhs == rhs);
 bool operator>  (const Integer& lhs, const Integer& rhs) { return rhs < lhs; }
 bool operator<=(const Integer& lhs, const Integer& rhs) { return !(lhs > rhs); }
 bool operator>=(const Integer& lhs, const Integer& rhs) { return !(lhs < rhs); }
-
-//temp.print_as_bits();
-//std::cout << std::endl;
