@@ -1,9 +1,21 @@
+/**	@file Operator Overloading.cpp
+	@author Bowen Xuan
+	@date May 16th 
+
+	This program contains List, Node and Iterator class. Every node contains an int type data
+	and with private variable Node* previous and after; List class inludes public member functions
+	to sort, reverse, swap, merge lists. The Iterator class has all the operator overloaded that
+	can be used to iterator through list.	
+*/
+
+
 #include <iostream>    
 #include <iomanip>      
 #include <string>
-#include<cassert>
-#include<algorithm>
-
+#include <cassert>
+#include <algorithm>
+/**Every node contains an int type data and with private variable Node* previous and after; 
+*/
 class Node {
 	friend class List;
 	friend class Iterator;
