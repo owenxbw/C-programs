@@ -1,18 +1,19 @@
+/**	@file Operator Overloading.cpp
+	@author Bowen Xuan
+	@date April 28th 
+
+	This program defines an Integer class that perform arithmetic operation on integers 
+	on bit-wise level, so that we could overcome the constrain of being between the max 
+	and min values the int data type can hold. This class has all basic arithmetic 
+	operators overloaded.	
+*/
+
 #include <iostream>    
 #include <iomanip>      
 #include <string>
 #include <math.h>
 #include <vector>
 
-/**	@file operator overloading
-	@author Bowen Xuan
-	@date April 28th 
-	
-	This program defines an Integer class that perform arithmetic operation on integers 
-	on bit-wise level, so that we could overcome the constrain of being between the max 
-	and min values the int data type can hold. This class has all basic arithmetic 
-	operators overloaded.	
-*/
 class Integer
 {
 public:
@@ -85,6 +86,11 @@ Integer::Integer(int a) {
 	}
 
 }
+
+/** This function adds value of another Integer class to current Integer class
+	@param lhs another Integer class being added to.
+	return a Integer& as the sum of this and rhs.
+*/
 
 Integer& Integer::operator+=(const Integer& rhs) {
 	bool carry = 0;
