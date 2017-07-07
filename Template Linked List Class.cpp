@@ -21,6 +21,11 @@ class List;
 template <typename T>
 class Iterator;
 
+
+/** This class Node contains data(template type) two Node pointers: previous and next
+	@param previous and next 
+	return
+*/
 template <typename T>
 class Node {
 	friend class List<T>;
@@ -36,6 +41,11 @@ private:
 	Node<T>* next;
 };
 
+/** This class List contains three Node pointers: special,first,last. Special is the one after last.
+	It also contains several member functions: insert(),erase(),reverse(),swap(),sort() and push_front etc. 
+	@param special,first,last 
+	return
+*/
 template<typename T>
 class List {
 	friend class Iterator<T>;
@@ -65,7 +75,12 @@ private:
 	unsigned int size;
 };
 
-
+\
+/** This class Iterator contains one Node pointers: position and one List pointer container 
+	It also contains several member functions: ++,--,*(),next(), previous()
+	@param position, container
+	return
+*/
 template<typename T>
 class Iterator {	//serve as pointer
 	friend class List<T>;
@@ -91,7 +106,7 @@ private:
 
 template<typename T>
 List<T>::List() {
-	special = new Node<T>;		//??
+	special = new Node<T>;
 	first = special;
 	last = special;
 	size = 0;
@@ -333,19 +348,6 @@ bool Iterator<T>::operator==(const Iterator<T>& b) const {
 	return position == b.position;	//container??
 }
 
-//template<typename T>
-//Node<T>::Node() {
-//	//data = 0;
-//	previous = NULL;
-//	next = NULL;
-//}
-//template<typename T>
-//Node<T>::Node(T s) {
-//	//data = s;
-//	previous = NULL;
-//	next = NULL;
-//}
-
 template<typename T>
 T Node<T>::operator*() const {
 	return data;
@@ -375,8 +377,6 @@ bool Point2D::operator==(const Point2D& rhs) const {
 std::ostream& operator<<(std::ostream& out, const Point2D& a) {
 	return out <<"("<< a.x << "," << a.y <<")";
 }
-
-
 
 
 
